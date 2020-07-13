@@ -3,11 +3,9 @@ Sample application to demonstrate the CURD operation with Nodejs and MongoDB
 
 Steps to start the application
 
-1.git clone https://github.com/SparshKesari/theOffice2
+1.cd /path/to/nodejs-mongodb
 
-2.cd /path/to/nodejs-mongodb
+2.npm install
 
-3.npm install
-
-4.node app.js
+3.node app.js
 
