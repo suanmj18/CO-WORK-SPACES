@@ -1,0 +1,37 @@
+
+<%- include('../partials/header'); -%>
+<!-- <h1>We Work Together</h1> -->
+
+
+
+<div class = container>
+             <header class ="jumbotron">
+    <div class = container>
+        <h1>Welcome to your offices</h1>
+        <p>Chose your perfect Office . "We Work Together"</p>
+        <h4>Revolutionise your workspace        </h4>
+        <p>Whether you’re an established enterprise or a growing startup, discover spaces that inspire your most impactful work.</p>
+      <button class="btn btn-light">  <a href="/offices/new">List your own Office</a></button>
+      <br><br><hr>
+        <h4><p> Select your office from our best available options. </p></h4>
+    </div>
+</header>
+
+<div class = "row text-center" style = "display:flex; flex-wrap : wrap;">
+  <% offices.forEach(function(offices){ %>
+    <div class="col-md-3 col-sm-6">
+            <div class = "img-thumbnail">
+                    <img class = "img-responsive" src="<%= offices.image %>" >
+            <div class= caption>
+                     <h4> <%= offices.name %> </h4>
+             </div>
+             <p>
+                 <a href="/offices/<%= offices._id %>" class="btn btn-primary">More info</a>
+             </p>
+    </div>
+    </div>
+<%}); %>
+    </div>
+</div> 
+
+<%- include('../partials/footer'); -%>

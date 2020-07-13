@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>theOffice</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href ="/stylesheets/main.css">
+</head>
+ <body>
+     
+
+    <!-- NAvbar -->
+    <nav class="navbar navbar-default navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                    <a class="navbar-brand" href ="/">theOffice</a>
+            </div>  
+
+            <!-- <div class="collapse navbar-collapse" id="navbarNav"> -->
+                <ul class="nav navbar-nav navbar-right ">
+                      <%  if(!currentUser)   {%> 
+
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Sign up</a></li>
+                        <%} else { %>
+                            <li>
+                                <a href="#">Signed In As <%= currentUser.username  %>
+                                </a>
+                                </li>
+                        <li><a href="/logout">Log Out</a></li>
+                        <% } %>
+                    </ul>
+                <!-- </div> -->
+            </div>
+    </nav>
+    
+    <div class = 'container-fluid'>
+        <% if(error && error.length > 0) { %>
+
+        <div class="alert alert-danger" role="alert">    
+        <h4> <%= error %></h4>
+        </div>
+        <% } %>
+        <% if(success && success.length > 0) { %>
+
+        <div class="alert alert-success" role="alert">    
+        <h4> <%= success %></h4>
+        </div>
+        <% } %>
+
+    </div>

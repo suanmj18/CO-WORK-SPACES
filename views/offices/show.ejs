@@ -1,0 +1,58 @@
+<%- include('../partials/header'); -%>
+ <div class= "container">
+        <div class ="row">
+            <div class="col-md-3">
+                <p class ="lead" >the Office</p>
+                <div class = "list-group">
+                        <li class ="list-group-item">Info 1</li>
+                        <li class ="list-group-item">Info 2</li>
+                        <li class ="list-group-item">Info 3</li>
+                  </div>
+            </div>
+<div class ="col-md-9">
+    <div class="img-thumbnail">
+        <br>
+        <img class = "img-responsive" src=" <%= office.image %>">
+        <div class = "caption-full">
+            <h6 class="float-right"> Rs.<%= office.price %> /12-hours</h6>
+        
+        <h4><a><%= office.name %></a></h4>
+        <h5><%= office.address %></p></h5>
+
+        <p><%= office.description %></p>
+
+        <p><em>Listing Uploaded By: <%= office.author.username %> </em></p>
+        
+        <div class="text-right">
+        <a class="btn btn-secondary" href ="/offices/<%= office._id %>/book/new" >
+            
+                Interested...!!!
+        </a>
+        </div>
+
+        </div>
+    </div>
+    <div class="card card-body bg-light">
+        <div class="text-right">
+            <a class="btn btn-success" href="/offices/<%= office._id %>/comments/new">Add your experiences here..!!</a>
+        </div>
+            <hr>
+            <% office.comments.forEach(function(comment){ %>
+                <div class="row">
+                    <div class="col-md-12"></div>
+                    <strong><%= comment.author.username %></strong></br> --- 
+                    <!-- <span class="pull-right">10 days ago</span><br> -->
+                     <p><%= comment.text %> </p>
+                </div>
+
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+ </div>
+
+
+
+
+
+<%- include('../partials/footer'); -%>

@@ -1,0 +1,83 @@
+body {
+    background-color: #000;
+  }
+
+
+  #landing-header {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding-top: 40vh;
+  }
+
+  #landing-header h1 {
+    color: #fff;
+  }
+
+  .slideshow { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .slideshow li { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 15s linear infinite; 
+  }
+
+  .slideshow li:nth-child(1) { 
+    background-image: url(https://www.graindesigners.com/images-cdn/2015/10/17/cool-office-space-ideas-with-white-sofa-modern-table-and-office-industrial-style-ceiling-design-cool-office-design-office-workspace-interior-cool-office-and-workspace-design-creative-office-design.jpg); 
+  }
+  .slideshow li:nth-child(2) { 
+    background-image: url(https://media.bizj.us/view/img/10443618/170222stahls002*1200xx1600-900-0-84.jpg);
+    animation-delay: 3s; 
+  }
+  .slideshow li:nth-child(3) { 
+    background-image: url(https://www.crismatec.com/python/co/cool-office-buildings-coloradoan-building-rb_office-decoration.jpg);
+    animation-delay: 6s; 
+  }
+  .slideshow li:nth-child(4) { 
+    background-image: url(https://teecom.com/media/Telecom_trends-1024x684.jpg);
+    animation-delay: 9s; 
+  }
+  .slideshow li:nth-child(5) { 
+    background-image: url(https://i.pinimg.com/originals/d8/51/42/d85142b1389baddb13865c98d49d4828.jpg);
+    animation-delay: 12s; 
+  }
+
+  @keyframes imageAnimation { 
+    0% { 
+      opacity: 0; 
+      animation-timing-function: ease-in;
+    }
+    10% {
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    20% {
+      opacity: 1
+    }
+    30% {
+      opacity: 0
+    }
+  }
+
+  /* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}

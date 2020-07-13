@@ -1,0 +1,47 @@
+<%- include('../partials/header'); -%>
+<div class="container">
+   <div >    
+         <div>
+        <h4 style ="text-align: center;">Thank you for showing your interest in the listing of <%= office.name %> </h4>
+        <h5 style ="text-align: center;">Please enter the date for which you want to book your office </h5>
+        
+         </div>
+            <div style = " width:30%; margin:25px auto; ">
+    <!-- <form action = "/offices/<%= office._id %>/comments" method="POST"> -->
+        <div class="form-group">
+                <label for="birthdaytime">Date and time:</label>
+                <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+                <!-- <input type="submit"> -->
+              
+            </div>
+        
+            <div class="form-group">
+                <label for="birthdaytime">Number of offices required</label>
+                <input class="form-control" type = "number" name= "comment[text]" placeholder="No. of offices">
+                <!-- <input type="submit"> -->
+              
+            </div>
+
+
+        <div class="form-group">
+            <input class="form-control" type = "text" name= "comment[text]" placeholder="Email ID">
+            </div>    
+        
+            <div class="form-group">
+                <input class="form-control" type = "text" name= "comment[text]" placeholder="Mobile No.">
+                </div>
+        <!-- <div class="form-group">
+        <input class="form-control" type = "text" name= "comment[author]" placeholder="author">
+        </div> -->
+        
+        <div class="form-group">
+        <button class="btn btn-lg btn-primary btn-block">Submit</button>
+        </div>
+    </form>
+
+    <a href="/offices">Go Back</a>
+</div>
+   </div>
+</div>
+
+<%- include('../partials/footer'); -%>
